@@ -29,6 +29,7 @@ module.exports = {
             { directory: path.resolve(__dirname, 'dist') },
             { directory: path.resolve(__dirname) }
         ],
+        devtool: 'source-map',
         compress: true,
         port: 8080,
         https: true,
