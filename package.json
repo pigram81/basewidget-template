@@ -1,0 +1,15 @@
+{
+    "name": "basewidget",
+    "version": "0.1.0",
+    "private": true,
+    "description": "Custom Widget prototype for SAP Analytics Cloud",
+    "scripts": {
+        "start": "http-server -c-1 -p 8080",
+        "lint": "eslint src --ext .js",
+        "build": "echo 'nothing to build yet'"
+    },
+    "devDependencies": {
+        "http-server": "^14.1.1",
+        "eslint": "^8.57.0"
+    }
+}

@@ -1,0 +1,46 @@
+{
+    "id": "com.test.demo.basewidget",
+    "version": "0.1.0",
+    "name": "Base Widget",
+    "newInstancePrefix": "BaseWidget",
+    "webcomponents": [
+        {
+            "kind": "main",
+            "tag": "com-test-demo-basewidget",
+            "url": "https://localhost:8080/widgets/basewidget/src/basewidget.js",
+            "ignoreIntegrity": true
+        },
+        {
+            "kind": "styling",
+            "tag": "com-test-demo-basewidget-styling",
+            "url": "https://localhost:8080/src/widgets/basewidget/basewidget_styling.js",
+            "ignoreIntegrity": true
+        }
+    ],
+    "properties": {
+        "color": {
+            "type": "string",
+            "default": "#2196f3"
+        },
+        "value": {
+            "type": "number",
+            "default": 0
+        }
+    },
+    "methods": {
+        "setValue": {
+            "parameters": [
+                {
+                    "name": "v",
+                    "type": "number"
+                }
+            ],
+            "body": "this.value = v;"
+        }
+    },
+    "events": {
+        "onClick": {
+            "description": "Triggered on click."
+        }
+    }
+}
