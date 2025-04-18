@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>BaseWidget Test Page</title>
+    <script src="dist/basewidget.js"></script>
+    <script src="dist/basewidget_styling.js"></script>
+</head>
+
+<body>
+    <!-- Main widget -->
+    <com-test-demo-basewidget style="width:200px;height:100px;"></com-test-demo-basewidget>
+
+    <!-- Styling panel -->
+    <com-test-demo-basewidget-styling></com-test-demo-basewidget-styling>
+
+    <script>
+        // Connessione tra panel e widget
+        const widget = document.querySelector('com-test-demo-basewidget');
+        const panel = document.querySelector('com-test-demo-basewidget-styling');
+
+        panel.addEventListener('propertiesChanged', e => {
+            const { color, value } = e.detail.properties;
+            if (color !== undefined) widget.color = color;
+            if (value !== undefined) widget.value = value;
+        });
+
+        // Sync iniziale
+        widget.color = '#2196f3';
+        widget.value = 0;
+    </script>
+</body>
+
+</html>

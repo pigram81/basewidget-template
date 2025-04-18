@@ -22,5 +22,17 @@ module.exports = {
             }
         ]
     },
-    mode: 'production'
+    mode: 'production',
+
+    devServer: {
+        static: [
+            { directory: path.resolve(__dirname, 'dist') },
+            { directory: path.resolve(__dirname) }
+        ],
+        compress: true,
+        port: 8080,
+        https: true,
+        hot: true,
+        open: true
+    }
 };
