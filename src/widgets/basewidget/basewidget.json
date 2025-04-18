@@ -8,14 +8,14 @@
         {
             "kind": "main",
             "tag": "com-test-demo-basewidget",
-            "url": "https://pigram81.github.io/basewidget-template/src/widgets/basewidget/basewidget.js",
+            "url": "https://pigram81.github.io/basewidget-template/dist/basewidget.js",
             "integrity": "",
             "ignoreIntegrity": true
         },
         {
             "kind": "styling",
             "tag": "com-test-demo-basewidget-styling",
-            "url": "https://pigram81.github.io/basewidget-template/src/widgets/basewidget/basewidget_styling.js",
+            "url": "https://pigram81.github.io/basewidget-template/dist/basewidget_styling.js",
             "integrity": "",
             "ignoreIntegrity": true
         }
