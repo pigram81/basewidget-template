@@ -3,17 +3,20 @@
     "version": "0.1.0",
     "name": "Base Widget",
     "newInstancePrefix": "BaseWidget",
+    "icon": "https://pigram81.github.io/basewidget-template/src/widgets/basewidget/icon.png",
     "webcomponents": [
         {
             "kind": "main",
             "tag": "com-test-demo-basewidget",
-            "url": "https://localhost:8080/widgets/basewidget/src/basewidget.js",
+            "url": "https://pigram81.github.io/basewidget-template/src/widgets/basewidget/basewidget.js",
+            "integrity": "",
             "ignoreIntegrity": true
         },
         {
             "kind": "styling",
             "tag": "com-test-demo-basewidget-styling",
-            "url": "https://localhost:8080/src/widgets/basewidget/basewidget_styling.js",
+            "url": "https://pigram81.github.io/basewidget-template/src/widgets/basewidget/basewidget_styling.js",
+            "integrity": "",
             "ignoreIntegrity": true
         }
     ],
