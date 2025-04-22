@@ -363,5 +363,3 @@ const datasource = {
     },
     "state": "success"
 }
-
-export default datasource;

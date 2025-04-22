@@ -52,7 +52,9 @@ import DataSourceService from './services/dataSource.service.js';
             }
 
             // Crea la nuova istanza
-            this._dataSource = new DataSourceService(dataSource);
+            this._dataSource = new DataSourceService(dataSource).getSimplifiedData();
+            console.log('DataSource disponibile:', this._dataSource);
+
         }
 
         _render() {
@@ -61,7 +63,6 @@ import DataSourceService from './services/dataSource.service.js';
 
             // Se ci sono dati disponibili, è possibile utilizzarli per il rendering
             if (this._dataSource) {
-                console.log('DataSource disponibile:', this._dataSource);
                 // Qui puoi aggiungere la logica per visualizzare i dati
             }
         }
