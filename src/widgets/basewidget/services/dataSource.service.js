@@ -181,6 +181,24 @@ class DataSourceService {
             return simplifiedItem;
         });
     }
+
+    /**
+     * Ottiene la lista completa di tutti i campi (dimensioni e misure) con relativi id e label
+     * @returns {Array} Lista combinata di dimensioni e misure
+     */
+    getAllFields() {
+        const dimensions = this.getDimensions().map(dim => ({
+            ...dim,
+            type: 'dimension'
+        }));
+
+        const measures = this.getMeasures().map(measure => ({
+            ...measure,
+            type: 'measure'
+        }));
+
+        return [...dimensions, ...measures];
+    }
 }
 
 export default DataSourceService;

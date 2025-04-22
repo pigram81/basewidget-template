@@ -14,6 +14,7 @@
         "@babel/preset-env": "^7.x.x",
         "babel-loader": "^9.x.x",
         "eslint": "^8.57.0",
+        "html-loader": "^4.2.0",
         "http-server": "^14.1.1",
         "webpack": "^5.x.x",
         "webpack-cli": "^5.x.x",
