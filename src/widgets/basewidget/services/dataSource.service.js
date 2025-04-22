@@ -115,6 +115,17 @@ class DataSourceService {
     }
 
     /**
+     * Pulisce le risorse utilizzate dal servizio
+     * Chiamare questo metodo quando il servizio non è più necessario
+     * per evitare memory leak
+     */
+    dispose() {
+        // Rimuovi riferimenti ai dati
+        this.dataSource = null;
+    }
+
+
+    /**
      * Restituisce i dati in formato semplificato usando le label come chiavi
      * @returns {Array} Dati con struttura più completa
      */

@@ -30,6 +30,22 @@
             "default": 0
         }
     },
+    "dataBindings": {
+        "cwDataSource": {
+            "feeds": [
+                {
+                    "id": "dimensions",
+                    "description": "Dimensions",
+                    "type": "dimension"
+                },
+                {
+                    "id": "measures",
+                    "description": "Measures",
+                    "type": "mainStructureMember"
+                }
+            ]
+        }
+    },
     "methods": {
         "setValue": {
             "parameters": [
