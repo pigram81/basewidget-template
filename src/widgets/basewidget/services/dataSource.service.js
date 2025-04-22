@@ -113,6 +113,63 @@ class DataSourceService {
             item[dimensionKey] && item[dimensionKey].id === value
         );
     }
+
+    /**
+     * Restituisce i dati in formato semplificato usando le label come chiavi
+     * @returns {Array} Dati con struttura più completa
+     */
+    getSimplifiedData() {
+        const data = this.getData();
+        const dimensions = this.getDimensions();
+        const measures = this.getMeasures();
+
+        // Creiamo dizionari per accesso veloce
+        const keyToInfoMap = {};
+        dimensions.forEach(dim => {
+            keyToInfoMap[dim.key] = {
+                label: dim.label,
+                id: dim.id
+            };
+        });
+        measures.forEach(measure => {
+            keyToInfoMap[measure.key] = {
+                label: measure.label,
+                id: measure.id
+            };
+        });
+
+        return data.map(item => {
+            const simplifiedItem = {};
+
+            // Processa dimensioni
+            dimensions.forEach(dim => {
+                if (item[dim.key] && item[dim.key].label) {
+                    simplifiedItem[keyToInfoMap[dim.key].label] = {
+                        key: dim.key,
+                        id: keyToInfoMap[dim.key].id,
+                        value: item[dim.key].label
+                    };
+                }
+            });
+
+            // Processa misure
+            measures.forEach(measure => {
+                if (item[measure.key]) {
+                    const measureData = item[measure.key];
+                    simplifiedItem[keyToInfoMap[measure.key].label] = {
+                        key: measure.key,
+                        id: keyToInfoMap[measure.key].id,
+                        value: {
+                            raw: measureData.raw,
+                            formatted: measureData.formatted
+                        }
+                    };
+                }
+            });
+
+            return simplifiedItem;
+        });
+    }
 }
 
 export default DataSourceService;
