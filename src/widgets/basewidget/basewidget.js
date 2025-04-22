@@ -46,6 +46,11 @@ import templateHtml from './template.html';
             return this._dataSource;
         }
 
+        /**
+         * Setter per il DataSourceService.
+         * Pulisce l'istanza precedente del DataSourceService se esiste e crea una nuova istanza.
+         * @param {DataSourceService} dataSource - L'istanza del DataSourceService da impostare.
+         */
         set cwDataSource(dataSource) {
             // Pulisci l'istanza precedente del DataSourceService se esiste
             if (this._dataSource && typeof this._dataSource.dispose === 'function') {
@@ -54,7 +59,7 @@ import templateHtml from './template.html';
 
             // Crea la nuova istanza
             this._dataSource = new DataSourceService(dataSource);
-            console.log('DataSource disponibile:', this._dataSource);
+            console.log('DataSource disponibile:', this._dataSource.getSimplifiedData());
 
         }
 

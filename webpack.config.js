@@ -36,7 +36,7 @@ module.exports = {
         ],
         compress: true,
         port: 8080,
-        https: true,
+        https: false,
         hot: true,
         open: true
     }

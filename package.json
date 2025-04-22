@@ -4,8 +4,8 @@
     "private": true,
     "description": "Custom Widget prototype for SAP Analytics Cloud",
     "scripts": {
-        "start": "http-server -c-1 -p 8080",
         "serve": "webpack serve --config webpack.config.js --mode development",
+        "watch": "webpack --config webpack.config.js --mode development --watch",
         "lint": "eslint src --ext .js",
         "build": "webpack --config webpack.config.js --mode production",
         "build-dev": "webpack --config webpack.config.js --mode development"
@@ -15,7 +15,6 @@
         "babel-loader": "^9.x.x",
         "eslint": "^8.57.0",
         "html-loader": "^4.2.0",
-        "http-server": "^14.1.1",
         "webpack": "^5.x.x",
         "webpack-cli": "^5.x.x",
         "webpack-dev-server": "^4.15.2"
